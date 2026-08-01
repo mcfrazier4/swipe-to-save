@@ -1,19 +1,18 @@
 import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, animate, motion, useMotionValue, useTransform, type PanInfo } from 'framer-motion';
-import { Box, Typography, useTheme } from '@mui/material';
+import { Box, Typography, useTheme, alpha } from '@mui/material';
 import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
 import CheckRoundedIcon from '@mui/icons-material/CheckRounded';
 import { useSavings } from '../state/SavingsContext';
-import { SWIPE_SAVE_AMOUNT } from '../data/mockSavings';
 
-const HANDLE_SIZE = 56;
-const TRACK_PADDING = 6;
+const HANDLE_SIZE = 44;
+const TRACK_PADDING = 8;
 const COMMIT_RATIO = 0.62;
 
 export function SwipeToSaveWidget() {
   const theme = useTheme();
   const trackRef = useRef<HTMLDivElement>(null);
-  const { addSaving } = useSavings();
+  const { perSwipeAmount, addSaving } = useSavings();
   const [trackWidth, setTrackWidth] = useState(0);
   const [justSaved, setJustSaved] = useState(false);
   const x = useMotionValue(0);
@@ -37,7 +36,7 @@ export function SwipeToSaveWidget() {
 
   const handleDragEnd = (_event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     if (info.offset.x >= maxDrag * COMMIT_RATIO) {
-      addSaving(SWIPE_SAVE_AMOUNT);
+      addSaving(perSwipeAmount);
       setJustSaved(true);
       window.setTimeout(() => setJustSaved(false), 1500);
     }
@@ -50,10 +49,10 @@ export function SwipeToSaveWidget() {
         ref={trackRef}
         sx={{
           position: 'relative',
-          height: HANDLE_SIZE + TRACK_PADDING * 2,
+          height: 60,
           borderRadius: 999,
-          background: theme.palette.mode === 'light' ? '#EFE9DD' : theme.palette.action.hover,
-          padding: `${TRACK_PADDING}px`,
+          background: theme.palette.background.paper,
+          border: `1px solid ${alpha(theme.palette.primary.main, 0.5)}`,
           overflow: 'hidden',
           userSelect: 'none',
         }}
@@ -64,7 +63,7 @@ export function SwipeToSaveWidget() {
             inset: 0,
             width: fillWidth,
             borderRadius: 999,
-            background: `linear-gradient(90deg, ${theme.palette.primary.dark}, ${theme.palette.primary.main})`,
+            background: alpha(theme.palette.primary.main, 0.12),
           }}
         />
 
@@ -75,13 +74,12 @@ export function SwipeToSaveWidget() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            paddingLeft: HANDLE_SIZE + TRACK_PADDING,
             opacity: labelOpacity,
             pointerEvents: 'none',
           }}
         >
-          <Typography variant="button" sx={{ color: theme.palette.primary.dark, letterSpacing: 0.4 }}>
-            Swipe to save ${SWIPE_SAVE_AMOUNT}
+          <Typography variant="button" sx={{ color: theme.palette.primary.main, letterSpacing: 0.4 }}>
+            Slide to Transfer
           </Typography>
         </motion.div>
 
@@ -93,20 +91,22 @@ export function SwipeToSaveWidget() {
           onDragEnd={handleDragEnd}
           style={{
             x,
+            position: 'absolute',
+            left: TRACK_PADDING,
+            top: TRACK_PADDING,
             width: HANDLE_SIZE,
             height: HANDLE_SIZE,
             borderRadius: '50%',
-            background: theme.palette.background.paper,
+            background: theme.palette.primary.main,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             cursor: 'grab',
-            boxShadow: '0 4px 12px rgba(0,0,0,0.18)',
             touchAction: 'pan-y',
           }}
           whileTap={{ cursor: 'grabbing', scale: 1.05 }}
         >
-          <ArrowForwardRoundedIcon sx={{ color: theme.palette.primary.main }} />
+          <ArrowForwardRoundedIcon sx={{ color: theme.palette.primary.contrastText }} />
         </motion.div>
       </Box>
 
@@ -129,7 +129,7 @@ export function SwipeToSaveWidget() {
             >
               <CheckRoundedIcon fontSize="small" sx={{ color: theme.palette.success.main }} />
               <Typography variant="body2" sx={{ color: theme.palette.success.dark, fontWeight: 600 }}>
-                Saved ${SWIPE_SAVE_AMOUNT}
+                Saved ${perSwipeAmount}
               </Typography>
             </motion.div>
           )}
