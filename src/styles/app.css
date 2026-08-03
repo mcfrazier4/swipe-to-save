@@ -1,0 +1,239 @@
+/* ============ demo stage (always-black page around the phone) ============ */
+
+.stage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  padding: 36px 16px;
+}
+
+/* ============ phone frame ============ */
+
+.phone {
+  position: relative;
+  padding: 12px;
+  border-radius: 64px;
+  background: #0b0b10;
+  box-shadow:
+    0 0 0 2px #2a2a34,
+    0 2px 0 3px #08080c,
+    0 34px 90px -30px rgba(43, 229, 214, 0.22),
+    0 18px 50px rgba(0, 0, 0, 0.85);
+}
+
+.phone__screen {
+  position: relative;
+  width: 393px;
+  height: 852px;
+  border-radius: 52px;
+  overflow: hidden;
+  background: var(--screen-bg);
+  color: var(--ink);
+  transition: background 0.45s ease;
+}
+
+.phone__screen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--screen-glow);
+  pointer-events: none;
+}
+
+.phone__island {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  translate: -50%;
+  width: 118px;
+  height: 34px;
+  border-radius: 20px;
+  background: #050507;
+  z-index: 70;
+}
+
+.statusbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px 0;
+  z-index: 70;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.statusbar__icons {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* ============ app home (inside the screen) ============ */
+
+.apphome {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 72px 20px 0;
+}
+
+.apphome__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wordmark {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Bricolage Grotesque Variable', sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.wordmark__disc {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--pill-thumb);
+  box-shadow: var(--shadow-thumb);
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--guava);
+  color: var(--ink-on-loud);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.apphome__greeting {
+  font-family: 'Bricolage Grotesque Variable', sans-serif;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.apphome__balance {
+  margin-top: 4px;
+  font-size: 14px;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.apphome__teaser {
+  margin-top: auto;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-bottom: none;
+  border-radius: 24px 24px 0 0;
+  padding: 18px 20px 28px;
+  box-shadow: var(--shadow-card);
+}
+
+.apphome__teaser-icon {
+  flex: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: var(--chip-bg);
+  color: var(--surf-deep);
+}
+
+[data-theme='dark'] .apphome__teaser-icon {
+  color: var(--surf);
+}
+
+.apphome__teaser-title {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.apphome__teaser-copy {
+  margin-top: 3px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+/* ============ controls under the frame ============ */
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.controls__group {
+  display: flex;
+  gap: 2px;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.controls__mode {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  color: #969aa3;
+  transition:
+    color 0.15s ease,
+    background 0.15s ease;
+}
+
+.controls__mode:hover {
+  color: #fff;
+}
+
+.controls__mode[aria-pressed='true'] {
+  background: #fff;
+  color: #101014;
+}
+
+.controls__reset {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 48px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.09);
+  color: #969aa3;
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    color 0.15s ease,
+    background 0.15s ease;
+}
+
+.controls__reset:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
+}
