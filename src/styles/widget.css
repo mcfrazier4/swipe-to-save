@@ -1,0 +1,415 @@
+/* ============ save card — one fixed geometry for every state ============ */
+
+.widgetwrap {
+  position: relative;
+}
+
+.savecard {
+  position: relative;
+  height: 482px;
+  padding: 20px 20px 18px;
+  border-radius: 28px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow-card);
+  display: grid;
+  grid-template-rows: 26px minmax(20px, auto) 1fr 48px 64px;
+  row-gap: 12px;
+  overflow: hidden;
+  transition: background 0.45s ease;
+}
+
+.savecard__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.savecard__title {
+  font-family: 'Bricolage Grotesque Variable', sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.savecard__edit {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 44px;
+  min-width: 44px;
+  /* keeps the 26px header row's visual geometry while meeting 44px targets */
+  margin: -9px 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--surf-deep);
+  padding: 0 2px;
+}
+
+[data-theme='dark'] .savecard__edit {
+  color: var(--surf);
+}
+
+.savecard__edit:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.savecard__sub {
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+/* hero slot */
+
+.savecard__hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+
+.savecard__goal,
+.savecard__wrapup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+}
+
+.savecard__emoji {
+  width: 72px;
+  height: 72px;
+  border-radius: 26px;
+  display: grid;
+  place-items: center;
+  font-size: 38px;
+  background: var(--chip-bg);
+  border: 1px solid var(--chip-border);
+  margin-bottom: 4px;
+}
+
+.savecard__goalname {
+  font-family: 'Bricolage Grotesque Variable', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.savecard__amount {
+  font-size: 15px;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.savecard__amount strong {
+  font-family: 'Bricolage Grotesque Variable', sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-right: 6px;
+}
+
+.savecard__meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+/* stepper slot */
+
+.savecard__steps {
+  display: flex;
+  align-items: center;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.stepper--ghost {
+  opacity: 0.45;
+}
+
+.stepper__cell {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.stepper__cell:first-child {
+  flex: 0 0 auto;
+}
+
+.stepper__line {
+  position: relative;
+  flex: 1;
+  height: 5px;
+  margin: 0 5px;
+  border-radius: 3px;
+  background: var(--step-connector);
+  overflow: hidden;
+}
+
+.stepper__line-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: var(--step-connector-done);
+  border-radius: 3px;
+}
+
+.stepper__dot {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--step-idle-ink);
+  box-shadow: inset 0 0 0 2.5px var(--step-idle-ring);
+  background: transparent;
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    color 0.25s ease;
+}
+
+.stepper--ghost .stepper__dot {
+  box-shadow: none;
+  outline: 2px dashed var(--step-idle-ring);
+  outline-offset: -2px;
+}
+
+.stepper__dot.is-done {
+  background: var(--step-done-bg);
+  box-shadow: none;
+  color: var(--ink-on-loud);
+}
+
+[data-theme='dark'] .stepper__dot.is-done {
+  color: #10142e;
+}
+
+.stepper__dot.is-active {
+  background: var(--step-active-bg);
+  box-shadow: 0 5px 16px -4px var(--step-active-bg);
+}
+
+.stepper__pulse {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+/* action slot: swipe pill + CTA share the exact same footprint */
+
+.savecard__foot {
+  display: flex;
+}
+
+.pill {
+  position: relative;
+  flex: 1;
+  height: 64px;
+  border-radius: 999px;
+  background: var(--pill-track);
+  border: 1px solid var(--pill-track-border);
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+.pill.is-disabled {
+  pointer-events: none;
+}
+
+.pill__fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 999px;
+  background: var(--pill-fill);
+}
+
+.pill__label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--pill-label);
+  pointer-events: none;
+}
+
+.pill__arrows {
+  display: inline-flex;
+}
+
+.pill__arrows svg {
+  margin-left: -7px;
+  animation: arrow-pulse 1.5s ease-in-out infinite;
+}
+
+.pill__arrows svg:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.pill__arrows svg:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes arrow-pulse {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pill__arrows svg {
+    animation: none;
+    opacity: 0.7;
+  }
+}
+
+.pill__thumb {
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--pill-thumb);
+  box-shadow:
+    var(--shadow-thumb),
+    inset 0 0 0 1.5px var(--pill-thumb-ring);
+  color: var(--pill-thumb-ink);
+  cursor: grab;
+}
+
+.pill__thumb:active {
+  cursor: grabbing;
+}
+
+/* CTA pill (intro + chain-done) occupies the same slot as the swipe pill */
+
+.cta-pill {
+  flex: none;
+  width: 100%;
+  height: 64px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--guava);
+  color: var(--cta-ink);
+  font-family: 'Bricolage Grotesque Variable', sans-serif;
+  font-size: 16.5px;
+  font-weight: 700;
+  letter-spacing: 0.005em;
+  box-shadow: var(--shadow-pop);
+  transition:
+    transform 0.15s ease,
+    filter 0.15s ease;
+}
+
+.cta-pill:hover:enabled {
+  filter: brightness(1.07);
+  transform: translateY(-1px);
+}
+
+.cta-pill:active:enabled {
+  transform: translateY(0);
+}
+
+.cta-pill:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ============ celebrations ============ */
+
+.celebration {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  border-radius: 28px;
+  background: var(--card-bg);
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.celebration__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 0 28px;
+}
+
+.celebration__title {
+  font-family: 'Bricolage Grotesque Variable', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.celebration__copy {
+  font-size: 15px;
+  color: var(--ink-soft);
+}
+
+.fx-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* fireworks ring the card, breaking out of its bounds */
+.fx-canvas--fireworks {
+  position: absolute;
+  inset: -170px -24px;
+  width: calc(100% + 48px);
+  height: calc(100% + 340px);
+  z-index: 30;
+}
+
+/* the coin fountain rides the same oversized canvas, above the shells */
+.fx-canvas--coins {
+  z-index: 31;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

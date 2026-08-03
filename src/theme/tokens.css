@@ -1,0 +1,135 @@
+/* ===================================================================
+   Sundollar tokens — bright Floridian bank for 20–30s.
+   Light = "Flamingo Daylight": sky-to-sand air, warm-white card,
+   guava / tangerine / sunshine / surf doing real work.
+   Dark = "Neon Night Swim": deep-ocean indigo with neon glow.
+   Scope: [data-theme] sits on the phone screen, not the page —
+   the page itself is always black.
+   =================================================================== */
+
+[data-theme='light'] {
+  color-scheme: light;
+
+  /* grounds */
+  --screen-bg: linear-gradient(178deg, #45cdef 0%, #a9eee6 44%, #fff1c9 76%, #ffdf9e 100%);
+  --screen-glow: radial-gradient(
+    circle at 82% -4%,
+    rgba(255, 245, 214, 0.95) 0%,
+    rgba(255, 245, 214, 0) 44%
+  );
+  --card-bg: #fffdf8;
+  --card-border: rgba(18, 52, 51, 0.08);
+  --sheet-bg: #fffdf8;
+  --scrim: rgba(8, 34, 40, 0.42);
+
+  /* ink */
+  --ink: #113231;
+  --ink-soft: #43655f;
+  --ink-faint: #54736c;
+  --ink-on-loud: #ffffff;
+  --focus-ring: #007d76;
+
+  /* the crayon box */
+  --guava: #f2336b;
+  --tang: #f26a1b;
+  --sun: #ffc531;
+  --surf: #00a99f;
+  --surf-deep: #007d76;
+  --palm: #1c7a5e;
+
+  /* component surfaces */
+  --chip-bg: rgba(0, 169, 159, 0.1);
+  --chip-border: rgba(0, 169, 159, 0.32);
+  --chip-active-bg: #113231;
+  --chip-active-ink: #fffdf8;
+  --field-bg: #f2f7f2;
+  --field-border: rgba(18, 52, 51, 0.14);
+
+  /* swipe pill */
+  --pill-track: #eaf6f1;
+  --pill-track-border: rgba(18, 52, 51, 0.12);
+  --pill-fill: linear-gradient(90deg, rgba(0, 169, 159, 0.35), rgba(255, 197, 49, 0.65));
+  --pill-thumb: radial-gradient(circle at 35% 30%, #ffe082 0%, #ffb300 52%, #f26a1b 100%);
+  --pill-thumb-ring: rgba(242, 106, 27, 0.45);
+  --pill-thumb-ink: rgba(46, 22, 3, 0.85);
+  --pill-label: #43655f;
+  --cta-ink: #2a0a18;
+
+  /* stepper */
+  --step-idle-ring: rgba(18, 52, 51, 0.22);
+  --step-idle-ink: #54736c;
+  --step-active-bg: #f2336b;
+  --step-done-bg: #00a99f;
+  --step-connector: rgba(18, 52, 51, 0.16);
+  --step-connector-done: #00a99f;
+
+  /* depth */
+  --shadow-card: 0 18px 40px -18px rgba(9, 58, 66, 0.4), 0 2px 8px -2px rgba(9, 58, 66, 0.12);
+  --shadow-thumb: 0 6px 14px -4px rgba(210, 84, 0, 0.55);
+  --shadow-sheet: 0 -18px 48px -20px rgba(9, 58, 66, 0.45);
+  --shadow-pop: 0 24px 60px -20px rgba(242, 51, 107, 0.45);
+
+  /* celebration palettes (canvas reads these) */
+  --confetti-colors: #f2336b, #f26a1b, #ffc531, #00a99f, #1c7a5e, #ffffff;
+  /* daylight fireworks: saturated only — white and palm vanish against the sky */
+  --firework-colors: #f2336b, #f26a1b, #ffc531, #00a99f;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --screen-bg: linear-gradient(182deg, #060b26 0%, #131347 58%, #2e1250 100%);
+  --screen-glow: radial-gradient(
+    circle at 50% 108%,
+    rgba(255, 92, 138, 0.38) 0%,
+    rgba(255, 92, 138, 0) 52%
+  );
+  --card-bg: #151b46;
+  --card-border: rgba(180, 196, 255, 0.14);
+  --sheet-bg: #171d4c;
+  --scrim: rgba(3, 6, 22, 0.62);
+
+  --ink: #f3f5ff;
+  --ink-soft: #aeb6e6;
+  --ink-faint: #7e87c4;
+  --ink-on-loud: #10142e;
+  --focus-ring: #2be5d6;
+
+  --guava: #ff5c8a;
+  --tang: #ff8a4c;
+  --sun: #ffd34d;
+  --surf: #2be5d6;
+  --surf-deep: #17b3a8;
+  --palm: #58e0a6;
+
+  --chip-bg: rgba(43, 229, 214, 0.1);
+  --chip-border: rgba(43, 229, 214, 0.35);
+  --chip-active-bg: #2be5d6;
+  --chip-active-ink: #10142e;
+  --field-bg: #1e2558;
+  --field-border: rgba(180, 196, 255, 0.2);
+
+  --pill-track: #1e2558;
+  --pill-track-border: rgba(180, 196, 255, 0.18);
+  --pill-fill: linear-gradient(90deg, rgba(43, 229, 214, 0.35), rgba(255, 211, 77, 0.55));
+  --pill-thumb: radial-gradient(circle at 35% 30%, #ffd34d 0%, #ff8a4c 55%, #ff5c8a 100%);
+  --pill-thumb-ring: rgba(255, 92, 138, 0.5);
+  --pill-thumb-ink: rgba(46, 22, 3, 0.85);
+  --pill-label: #aeb6e6;
+  --cta-ink: #2a0a18;
+
+  --step-idle-ring: rgba(180, 196, 255, 0.3);
+  --step-idle-ink: #7e87c4;
+  --step-active-bg: #ff5c8a;
+  --step-done-bg: #2be5d6;
+  --step-connector: rgba(180, 196, 255, 0.22);
+  --step-connector-done: #2be5d6;
+
+  --shadow-card: 0 18px 44px -16px rgba(0, 0, 0, 0.65), 0 2px 10px -2px rgba(0, 0, 0, 0.4);
+  --shadow-thumb: 0 6px 16px -4px rgba(255, 92, 138, 0.6);
+  --shadow-sheet: 0 -18px 52px -18px rgba(0, 0, 0, 0.7);
+  --shadow-pop: 0 24px 64px -18px rgba(255, 92, 138, 0.5);
+
+  --confetti-colors: #ff5c8a, #ff8a4c, #ffd34d, #2be5d6, #58e0a6, #f3f5ff;
+  --firework-colors: #ff5c8a, #ff8a4c, #ffd34d, #2be5d6, #58e0a6;
+}

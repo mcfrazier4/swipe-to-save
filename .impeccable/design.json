@@ -1,0 +1,203 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-03T00:00:00Z",
+  "title": "Design System: Sundollar — Swipe to Save",
+  "extensions": {
+    "colorMeta": {
+      "guava": {
+        "role": "primary",
+        "displayName": "Guava",
+        "canonical": "#f2336b",
+        "tonalRamp": ["oklch(18% 0.09 14)", "oklch(30% 0.13 14)", "oklch(42% 0.17 14)", "oklch(54% 0.20 14)", "oklch(62% 0.21 14)", "oklch(74% 0.16 14)", "oklch(86% 0.10 14)", "oklch(95% 0.04 14)"]
+      },
+      "tangerine": {
+        "role": "tertiary",
+        "displayName": "Tangerine",
+        "canonical": "#f26a1b",
+        "tonalRamp": ["oklch(20% 0.07 45)", "oklch(32% 0.11 45)", "oklch(44% 0.14 45)", "oklch(56% 0.17 45)", "oklch(67% 0.19 45)", "oklch(77% 0.15 45)", "oklch(87% 0.09 45)", "oklch(95% 0.04 45)"]
+      },
+      "sunshine": {
+        "role": "tertiary",
+        "displayName": "Sunshine",
+        "canonical": "#ffc531",
+        "tonalRamp": ["oklch(22% 0.05 88)", "oklch(34% 0.08 88)", "oklch(48% 0.11 88)", "oklch(62% 0.13 88)", "oklch(74% 0.15 88)", "oklch(86% 0.16 88)", "oklch(92% 0.11 88)", "oklch(97% 0.05 88)"]
+      },
+      "surf": {
+        "role": "secondary",
+        "displayName": "Surf",
+        "canonical": "#00a99f",
+        "tonalRamp": ["oklch(18% 0.05 184)", "oklch(28% 0.07 184)", "oklch(40% 0.09 184)", "oklch(52% 0.10 184)", "oklch(64% 0.12 184)", "oklch(76% 0.11 184)", "oklch(87% 0.08 184)", "oklch(95% 0.04 184)"]
+      },
+      "palm": {
+        "role": "tertiary",
+        "displayName": "Palm",
+        "canonical": "#1c7a5e",
+        "tonalRamp": ["oklch(16% 0.04 166)", "oklch(26% 0.06 166)", "oklch(38% 0.08 166)", "oklch(50% 0.09 166)", "oklch(62% 0.10 166)", "oklch(74% 0.10 166)", "oklch(86% 0.08 166)", "oklch(95% 0.04 166)"]
+      },
+      "ink-lagoon": {
+        "role": "neutral",
+        "displayName": "Ink Lagoon",
+        "canonical": "#113231",
+        "tonalRamp": ["oklch(15% 0.025 185)", "oklch(28% 0.035 185)", "oklch(40% 0.04 185)", "oklch(52% 0.04 185)", "oklch(64% 0.035 185)", "oklch(76% 0.03 185)", "oklch(88% 0.02 185)", "oklch(96% 0.01 185)"]
+      },
+      "warm-white-card": {
+        "role": "neutral",
+        "displayName": "Warm White Card",
+        "canonical": "#fffdf8",
+        "tonalRamp": ["oklch(20% 0.01 95)", "oklch(32% 0.01 95)", "oklch(46% 0.01 95)", "oklch(60% 0.01 95)", "oklch(74% 0.01 95)", "oklch(86% 0.01 95)", "oklch(94% 0.01 95)", "oklch(99% 0.01 95)"]
+      },
+      "night-guava": {
+        "role": "primary",
+        "displayName": "Night Guava (dark theme)",
+        "canonical": "#ff5c8a",
+        "tonalRamp": ["oklch(20% 0.08 10)", "oklch(32% 0.12 10)", "oklch(45% 0.16 10)", "oklch(58% 0.19 10)", "oklch(69% 0.19 10)", "oklch(79% 0.14 10)", "oklch(89% 0.08 10)", "oklch(96% 0.03 10)"]
+      },
+      "night-surf": {
+        "role": "secondary",
+        "displayName": "Night Surf (dark theme)",
+        "canonical": "#2be5d6",
+        "tonalRamp": ["oklch(20% 0.05 183)", "oklch(32% 0.07 183)", "oklch(46% 0.09 183)", "oklch(60% 0.11 183)", "oklch(72% 0.12 183)", "oklch(84% 0.13 183)", "oklch(91% 0.09 183)", "oklch(97% 0.04 183)"]
+      },
+      "night-card": {
+        "role": "neutral",
+        "displayName": "Night Card (dark theme)",
+        "canonical": "#151b46",
+        "tonalRamp": ["oklch(14% 0.06 275)", "oklch(24% 0.08 275)", "oklch(34% 0.09 275)", "oklch(46% 0.10 275)", "oklch(58% 0.10 275)", "oklch(70% 0.09 275)", "oklch(84% 0.06 275)", "oklch(95% 0.02 275)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Money figures (34px strong) and celebration titles (30px) only. Bricolage Grotesque 800, -0.02em." },
+      "headline": { "displayName": "Headline", "purpose": "App greeting (27px, text-wrap: balance) and sheet titles (24px)." },
+      "title": { "displayName": "Title", "purpose": "Card headers (19px), goal names (22px), wordmark (21px)." },
+      "body": { "displayName": "Body", "purpose": "Explainers and secondary copy in Rubik; 13.5-15px, line-height 1.45, ink-soft." },
+      "label": { "displayName": "Label", "purpose": "Chips, links, stepper numbers, pill labels; Rubik 600-700, 13-14.5px." }
+    },
+    "shadows": [
+      { "name": "shadow-card", "value": "0 18px 40px -18px rgba(9, 58, 66, 0.4), 0 2px 8px -2px rgba(9, 58, 66, 0.12)", "purpose": "Save card and docked teaser lift; sea-teal tinted, never gray. Dark theme: 0 18px 44px -16px rgba(0,0,0,0.65), 0 2px 10px -2px rgba(0,0,0,0.4)." },
+      { "name": "shadow-thumb", "value": "0 6px 14px -4px rgba(210, 84, 0, 0.55)", "purpose": "Warm cast under the sun-disc swipe thumb and wordmark disc. Dark theme: 0 6px 16px -4px rgba(255,92,138,0.6)." },
+      { "name": "shadow-sheet", "value": "0 -18px 48px -20px rgba(9, 58, 66, 0.45)", "purpose": "Upward lift under the full-screen sheet. Dark theme: 0 -18px 52px -18px rgba(0,0,0,0.7)." },
+      { "name": "shadow-pop", "value": "0 24px 60px -20px rgba(242, 51, 107, 0.45)", "purpose": "Guava-tinted pop reserved for the CTA pill. Dark theme: 0 24px 64px -18px rgba(255,92,138,0.5)." },
+      { "name": "step-active-glow", "value": "0 5px 16px -4px #f2336b", "purpose": "Glow under the active (pulsing) stepper dot; color rides --step-active-bg." }
+    ],
+    "motion": [
+      { "name": "spring-connector", "value": "spring(stiffness 210, damping 28)", "purpose": "Stepper connector fill sweep." },
+      { "name": "spring-sheet", "value": "spring(stiffness 320, damping 34)", "purpose": "Full-screen sheet rising from the device bottom; scrim fades 0.22s." },
+      { "name": "spring-pill-complete", "value": "spring(stiffness 420, damping 34)", "purpose": "Swipe thumb snapping to the end on a completed swipe (>=82% travel)." },
+      { "name": "spring-pill-return", "value": "spring(stiffness 260, damping 26)", "purpose": "Swipe thumb springing back on an abandoned drag." },
+      { "name": "spring-celebration-body", "value": "spring(stiffness 320, damping 20, delay 0.05s)", "purpose": "Celebration title popping in during the save takeover." },
+      { "name": "check-draw", "value": "pathLength 0 to 1, 0.3s ease-out, 0.1s delay", "purpose": "Stepper checkmark drawn on completion (reactbits grammar)." },
+      { "name": "active-dot-pop", "value": "scale [1, 1.18, 1], 0.45s ease-out", "purpose": "Stepper dot becoming active." },
+      { "name": "piggy-pop", "value": "scale [0, 1.18, 0.96, 1] + rotate [-8, 3, -1, 0], 0.7s ease-out", "purpose": "Finale piggy pop-in; coin drop follows at 0.55s delay." },
+      { "name": "arrow-pulse", "value": "opacity 0.25 to 1, 1.5s ease-in-out infinite, 0.2s stagger", "purpose": "Three chevrons on the swipe pill label; static at 0.7 opacity under reduced motion." },
+      { "name": "theme-crossfade", "value": "background 0.45s ease", "purpose": "Screen and card backgrounds crossfading on theme toggle." },
+      { "name": "celebration-hold", "value": "save 2400ms / finale 4300ms (reduced: 1500ms / 2000ms)", "purpose": "How long takeovers stay before auto-dismissing to the next state." },
+      { "name": "fx-durations", "value": "confetti 2000ms (finale 2600ms), fireworks 3600ms + spark decay", "purpose": "Canvas effects self-terminate; skipped entirely under reduced motion." }
+    ]
+  },
+  "components": [
+    {
+      "name": "CTA Pill",
+      "kind": "button",
+      "refersTo": "cta-pill",
+      "description": "The loudest button: guava capsule filling the card's 64px action slot (intro and chain-done states) and the sheet footer.",
+      "html": "<button class=\"ds-cta-pill\">Start a goal <svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m9 5.5 6.5 6.5L9 18.5\"/></svg></button>",
+      "css": ".ds-cta-pill { width: 100%; height: 64px; border: none; border-radius: 999px; display: flex; align-items: center; justify-content: center; gap: 8px; background: #f2336b; color: #2a0a18; font-family: 'Bricolage Grotesque Variable', sans-serif; font-size: 16.5px; font-weight: 700; letter-spacing: 0.005em; cursor: pointer; box-shadow: 0 24px 60px -20px rgba(242, 51, 107, 0.45); transition: transform 0.15s ease, filter 0.15s ease; } .ds-cta-pill:hover:enabled { filter: brightness(1.07); transform: translateY(-1px); } .ds-cta-pill:active:enabled { transform: translateY(0); } .ds-cta-pill:focus-visible { outline: 2px solid #007d76; outline-offset: 2px; } .ds-cta-pill:disabled { opacity: 0.45; cursor: not-allowed; box-shadow: none; }"
+    },
+    {
+      "name": "Swipe Pill",
+      "kind": "custom",
+      "refersTo": "swipe-pill-track",
+      "description": "The sacred gesture: 64px capsule track with a 52px radial sun-disc thumb dragged left to right; surf-to-sunshine fill trails the thumb.",
+      "html": "<div class=\"ds-swipepill\" role=\"slider\" tabindex=\"0\" aria-label=\"Swipe to save $10\" aria-valuemin=\"0\" aria-valuemax=\"100\" aria-valuenow=\"0\"><span class=\"ds-swipepill-fill\"></span><span class=\"ds-swipepill-label\">Swipe to save $10 <span class=\"ds-swipepill-arrows\"><svg viewBox=\"0 0 24 24\" width=\"14\" height=\"14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 5.5 6.5 6.5L9 18.5\"/></svg><svg viewBox=\"0 0 24 24\" width=\"14\" height=\"14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 5.5 6.5 6.5L9 18.5\"/></svg><svg viewBox=\"0 0 24 24\" width=\"14\" height=\"14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 5.5 6.5 6.5L9 18.5\"/></svg></span></span><span class=\"ds-swipepill-thumb\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 5.5 6.5 6.5L9 18.5\"/></svg></span></div>",
+      "css": ".ds-swipepill { position: relative; width: 100%; max-width: 340px; height: 64px; border-radius: 999px; background: #eaf6f1; border: 1px solid rgba(18, 52, 51, 0.12); overflow: hidden; } .ds-swipepill:focus-visible { outline: 2px solid #007d76; outline-offset: 2px; } .ds-swipepill-fill { position: absolute; inset: 0 auto 0 0; width: 64px; border-radius: 999px; background: linear-gradient(90deg, rgba(0, 169, 159, 0.35), rgba(255, 197, 49, 0.65)); } .ds-swipepill-label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 8px; font-family: 'Rubik Variable', system-ui, sans-serif; font-size: 15px; font-weight: 600; color: #43655f; pointer-events: none; } .ds-swipepill-arrows { display: inline-flex; } .ds-swipepill-arrows svg { margin-left: -7px; animation: ds-arrow-pulse 1.5s ease-in-out infinite; } .ds-swipepill-arrows svg:nth-child(2) { animation-delay: 0.2s; } .ds-swipepill-arrows svg:nth-child(3) { animation-delay: 0.4s; } @keyframes ds-arrow-pulse { 0%, 100% { opacity: 0.25; } 40% { opacity: 1; } } .ds-swipepill-thumb { position: absolute; top: 5px; left: 6px; width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; background: radial-gradient(circle at 35% 30%, #ffe082 0%, #ffb300 52%, #f26a1b 100%); box-shadow: 0 6px 14px -4px rgba(210, 84, 0, 0.55), inset 0 0 0 1.5px rgba(242, 106, 27, 0.45); color: rgba(46, 22, 3, 0.85); cursor: grab; }"
+    },
+    {
+      "name": "Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Preset option in an edge-bleeding swipe row; surf tint at rest, solid ink-lagoon when selected (aria-pressed).",
+      "html": "<div style=\"display:flex;gap:8px\"><button class=\"ds-chip\" aria-pressed=\"true\"><span>🏝️</span> Beach trip</button><button class=\"ds-chip\" aria-pressed=\"false\"><span>🎟️</span> Concert tix</button></div>",
+      "css": ".ds-chip { flex: none; display: inline-flex; align-items: center; gap: 6px; height: 48px; padding: 0 18px; border-radius: 999px; font-family: 'Rubik Variable', system-ui, sans-serif; font-size: 14.5px; font-weight: 600; white-space: nowrap; background: rgba(0, 169, 159, 0.1); border: 1px solid rgba(0, 169, 159, 0.32); color: #113231; cursor: pointer; transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease; } .ds-chip:hover { border-color: #00a99f; } .ds-chip:focus-visible { outline: 2px solid #007d76; outline-offset: 2px; } .ds-chip[aria-pressed='true'] { background: #113231; border-color: #113231; color: #fffdf8; }"
+    },
+    {
+      "name": "Link-Below",
+      "kind": "button",
+      "refersTo": "link-below",
+      "description": "The DIY escape hatch under every chip row ('Add my own'); underlined surf-deep link with a 44px hit area.",
+      "html": "<button class=\"ds-linkbtn\" aria-expanded=\"false\">Add my own</button>",
+      "css": ".ds-linkbtn { display: inline-flex; align-items: center; gap: 4px; min-height: 44px; background: none; border: none; padding: 0; font-family: 'Rubik Variable', system-ui, sans-serif; font-size: 14px; font-weight: 600; color: #007d76; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; transition: color 0.15s ease; } .ds-linkbtn:hover { color: #113231; } .ds-linkbtn:focus-visible { outline: 2px solid #007d76; outline-offset: 2px; }"
+    },
+    {
+      "name": "Stepper",
+      "kind": "custom",
+      "refersTo": "stepper",
+      "description": "Save-chain step bar (reactbits grammar): done = surf dot with drawn check, active = pulsing guava dot with glow, upcoming = numbered ring; connectors fill in surf.",
+      "html": "<div class=\"ds-stepper\" role=\"img\" aria-label=\"Save chain: 2 of 5 swipes complete\"><span class=\"ds-step-dot ds-is-done\"><svg viewBox=\"0 0 16 16\" width=\"17\" height=\"17\" fill=\"none\"><path d=\"M3.2 8.6 6.4 11.8 12.8 4.6\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span><span class=\"ds-step-line\"><span class=\"ds-step-line-fill\" style=\"width:100%\"></span></span><span class=\"ds-step-dot ds-is-done\"><svg viewBox=\"0 0 16 16\" width=\"17\" height=\"17\" fill=\"none\"><path d=\"M3.2 8.6 6.4 11.8 12.8 4.6\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span><span class=\"ds-step-line\"><span class=\"ds-step-line-fill\" style=\"width:100%\"></span></span><span class=\"ds-step-dot ds-is-active\"><span class=\"ds-step-pulse\"></span></span><span class=\"ds-step-line\"><span class=\"ds-step-line-fill\" style=\"width:0\"></span></span><span class=\"ds-step-dot\">4</span><span class=\"ds-step-line\"><span class=\"ds-step-line-fill\" style=\"width:0\"></span></span><span class=\"ds-step-dot\">5</span></div>",
+      "css": ".ds-stepper { display: flex; align-items: center; width: 100%; max-width: 340px; } .ds-step-line { position: relative; flex: 1; height: 5px; margin: 0 5px; border-radius: 3px; background: rgba(18, 52, 51, 0.16); overflow: hidden; } .ds-step-line-fill { position: absolute; inset: 0 auto 0 0; background: #00a99f; border-radius: 3px; } .ds-step-dot { flex: none; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; font-family: 'Rubik Variable', system-ui, sans-serif; font-size: 13px; font-weight: 700; color: #6c8a83; box-shadow: inset 0 0 0 2.5px rgba(18, 52, 51, 0.22); background: transparent; } .ds-step-dot.ds-is-done { background: #00a99f; box-shadow: none; color: #ffffff; } .ds-step-dot.ds-is-active { background: #f2336b; box-shadow: 0 5px 16px -4px #f2336b; } .ds-step-pulse { width: 11px; height: 11px; border-radius: 50%; background: #fff; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Recessed 48px seafoam input with 14px radius; money variant carries a leading $ and shifts its border to surf on focus.",
+      "html": "<input class=\"ds-field\" type=\"text\" placeholder=\"Name your goal\" aria-label=\"Custom goal name\" />",
+      "css": ".ds-field { height: 48px; width: 100%; max-width: 300px; padding: 0 14px; border-radius: 14px; border: 1px solid rgba(18, 52, 51, 0.14); background: #f2f7f2; color: #113231; font-family: 'Rubik Variable', system-ui, sans-serif; font-size: 15px; } .ds-field::placeholder { color: #54736c; } .ds-field:focus-visible { outline: 2px solid #007d76; outline-offset: 2px; } .ds-field:focus { border-color: #00a99f; }"
+    },
+    {
+      "name": "Save Card Shell",
+      "kind": "card",
+      "refersTo": "save-card",
+      "description": "The signature 482px five-slot card: 26px header / explainer / 1fr hero / 48px stepper / 64px action, 12px row gap — identical geometry in every state.",
+      "html": "<section class=\"ds-savecard\" aria-label=\"Swipe to Save\"><div class=\"ds-savecard-head\"><h2 class=\"ds-savecard-title\">Keep the chain alive</h2><button class=\"ds-savecard-edit\">Edit</button></div><p class=\"ds-savecard-sub\">Swipe 3 of 5. Don't break it now.</p><div class=\"ds-savecard-hero\"><span class=\"ds-savecard-emoji\">🏝️</span><h3 class=\"ds-savecard-goalname\">Beach trip</h3><p class=\"ds-savecard-amount\"><strong>$20</strong> of $500</p></div><div class=\"ds-savecard-slot\">stepper slot (48px)</div><div class=\"ds-savecard-slot\">action slot (64px)</div></section>",
+      "css": ".ds-savecard { height: 482px; width: 100%; max-width: 353px; padding: 20px 20px 18px; border-radius: 28px; background: #fffdf8; border: 1px solid rgba(18, 52, 51, 0.08); box-shadow: 0 18px 40px -18px rgba(9, 58, 66, 0.4), 0 2px 8px -2px rgba(9, 58, 66, 0.12); display: grid; grid-template-rows: 26px minmax(20px, auto) 1fr 48px 64px; row-gap: 12px; overflow: hidden; color: #113231; } .ds-savecard-head { display: flex; align-items: center; justify-content: space-between; } .ds-savecard-title { margin: 0; font-family: 'Bricolage Grotesque Variable', sans-serif; font-size: 19px; font-weight: 800; letter-spacing: -0.01em; } .ds-savecard-edit { min-height: 44px; margin: -9px 0; border: none; background: none; font-family: 'Rubik Variable', system-ui, sans-serif; font-size: 13px; font-weight: 600; color: #007d76; cursor: pointer; } .ds-savecard-edit:hover { text-decoration: underline; text-underline-offset: 3px; } .ds-savecard-sub { margin: 0; font-family: 'Rubik Variable', system-ui, sans-serif; font-size: 13.5px; line-height: 1.45; color: #43655f; } .ds-savecard-hero { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 6px; min-height: 0; } .ds-savecard-emoji { width: 72px; height: 72px; border-radius: 26px; display: grid; place-items: center; font-size: 38px; background: rgba(0, 169, 159, 0.1); border: 1px solid rgba(0, 169, 159, 0.32); } .ds-savecard-goalname { margin: 0; font-family: 'Bricolage Grotesque Variable', sans-serif; font-size: 22px; font-weight: 800; letter-spacing: -0.01em; } .ds-savecard-amount { margin: 0; font-family: 'Rubik Variable', system-ui, sans-serif; font-size: 15px; color: #43655f; font-variant-numeric: tabular-nums; } .ds-savecard-amount strong { font-family: 'Bricolage Grotesque Variable', sans-serif; font-size: 34px; font-weight: 800; letter-spacing: -0.02em; color: #113231; margin-right: 6px; } .ds-savecard-slot { display: grid; place-items: center; border: 1px dashed rgba(18, 52, 51, 0.22); border-radius: 12px; font-family: 'Rubik Variable', system-ui, sans-serif; font-size: 12px; color: #54736c; }"
+    },
+    {
+      "name": "Emoji Tile",
+      "kind": "input",
+      "refersTo": "emoji-btn",
+      "description": "48px emoji picker tile; hover scales up, selection earns a 1.5px guava border over chip tint.",
+      "html": "<div style=\"display:flex;gap:6px\"><button class=\"ds-emojibtn\" aria-pressed=\"true\">✈️</button><button class=\"ds-emojibtn\" aria-pressed=\"false\">🌊</button><button class=\"ds-emojibtn\" aria-pressed=\"false\">🎸</button></div>",
+      "css": ".ds-emojibtn { width: 48px; height: 48px; border-radius: 16px; display: grid; place-items: center; font-size: 23px; background: #f2f7f2; border: 1.5px solid transparent; cursor: pointer; transition: border-color 0.15s ease, transform 0.15s ease; } .ds-emojibtn:hover { transform: scale(1.08); } .ds-emojibtn:focus-visible { outline: 2px solid #007d76; outline-offset: 2px; } .ds-emojibtn[aria-pressed='true'] { border-color: #f2336b; background: rgba(0, 169, 159, 0.1); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Flamingo Daylight, Neon Night Swim",
+    "overview": "Sundollar is an invented, clearly synthetic bright-Floridian youth bank, and its world is one Florida day seen twice. In light mode (\"Flamingo Daylight\") the phone screen is open air — a sky-to-sand gradient with a warm sun-glow radial in the top-right corner — and content lives on a warm-white card floating in that air. In dark mode (\"Neon Night Swim\") the same screen becomes deep-ocean indigo with a guava glow rising from the bottom edge, and every accent re-inks to neon. The thesis: saving is one sun-bright thumb gesture chained into a visible streak; this world explicitly refuses the gray fintech dashboard-of-toggles.\n\nEnergy and saturation are features, not decoration — but numbers stay instantly legible: amounts and dates always render in high-contrast ink with tabular numerals. The interface is dense in the way a good phone widget is dense: one 482px card carries the entire product loop (invite → goal → swipe → streak → finale), and every state of that card shares one fixed five-slot geometry so the eye always knows where money things live. Delight is earned, not ambient: celebrations (confetti takeover, piggy pop, fireworks) fire only in response to a completed save, then get out of the way.",
+    "keyCharacteristics": [
+      "Two fully authored themes — Flamingo Daylight and Neon Night Swim — swapped by a single data-theme attribute on the phone screen; components reference only tokens, never raw hex.",
+      "One sacred card geometry: 482px, five fixed grid slots, in every state.",
+      "A four-accent \"crayon box\" (guava / tangerine / sunshine / surf) where each color has a real job.",
+      "Bricolage Grotesque 800 shouts, Rubik speaks; drawn 1.8-stroke icons.",
+      "Motion is spring-based (framer-motion) with authored reduced-motion equivalents for everything.",
+      "The demo shell is deliberately outside the world: a 393×852 phone frame on an always-black stage."
+    ],
+    "rules": [
+      { "name": "The Crayon Box Rule", "body": "Four accents, four jobs: guava acts, surf confirms, sunshine-and-tangerine embody the sun gesture, palm only parties. Never swap their roles, and never introduce a fifth accent.", "section": "colors" },
+      { "name": "The Re-Ink Rule", "body": "Components reference only --token custom properties from tokens.css; both themes come for free. A raw hex in a component file is a bug (the only exceptions in code today are text-on-guava #2a0a18, piggy detail inks #3d0f22/#2a0a18, and the demo shell, which lives outside the themed world).", "section": "colors" },
+      { "name": "The Two-Voice Rule", "body": "If it celebrates, names, or counts money, it is Bricolage 800 with negative tracking. Everything that explains or operates is Rubik. Never use Bricolage below weight 800 or for body copy.", "section": "typography" },
+      { "name": "The Honest Numbers Rule", "body": "Every money amount and date renders in tabular numerals; big figures are dark ink on the card surface, never on a saturated fill.", "section": "typography" },
+      { "name": "The Five-Slot Rule", "body": "No state of the save card may change the card's 482px height, its five grid rows, or which slot an element type lives in. New states compose within the slots.", "section": "layout" },
+      { "name": "The Thumb-Reach Rule (ADA 44px)", "body": "Every interactive target is at least 44×44px: chips, fields, and emoji buttons are 48px; pills are 64px; smaller visual affordances claim a 44px hit area via min-height/negative margins.", "section": "layout" },
+      { "name": "The Tinted Shadow Rule", "body": "No neutral-gray shadows anywhere. Daylight shadows carry sea-teal; glow shadows carry the color of the thing casting them (orange thumb, guava CTA, guava/pink active dot).", "section": "elevation" },
+      { "name": "The Sacred Footprint Rule", "body": "The swipe pill and the CTA pill occupy the exact same 64px capsule footprint in the card's action slot. Whatever the state, the money action is one thumb-reach away in the same place.", "section": "components" },
+      { "name": "The Bleed-and-Link Rule", "body": "Preset options are edge-bleeding, left-aligned, non-wrapping chip swipe-rows; the custom/DIY affordance is always an underlined link below the row, never a chip in it.", "section": "components" }
+    ],
+    "dos": [
+      "Do render every save-card state through the fixed 482px five-slot grid (26px / minmax(20px,auto) / 1fr / 48px / 64px, 12px gap) — compose within slots, never restructure them.",
+      "Do style exclusively through tokens.css custom properties so both Flamingo Daylight and Neon Night Swim stay complete; add any new color to both themes at once.",
+      "Do give every interactive target a ≥44px hit area, using negative-margin expansion when the visual element is smaller (see .savecard__edit).",
+      "Do read celebration colors from --confetti-colors / --firework-colors at runtime; keep light-mode fireworks to the saturated-only palette.",
+      "Do provide a reduced-motion equivalent for every animation: particles off, sheets fade, springs become instant, chevrons hold at 0.7 opacity, celebration holds shorten.",
+      "Do draw new icons on the 24-unit grid at 1.8 stroke with round caps, using currentColor.",
+      "Do set tabular-nums on anything numeric users will compare (amounts, balances, dates)."
+    ],
+    "donts": [
+      "Don't move, resize, or hide the swipe pill in any active-goal state — the gesture is sacred and lives only in the 64px action slot.",
+      "Don't use neutral-gray shadows or pure #ffffff/#000000 surfaces inside the phone; daylight shadows are sea-teal-tinted, the card is warm white #fffdf8.",
+      "Don't hardcode palette hex in components — the piggy, canvas effects, and every control read tokens so dark mode re-inks for free.",
+      "Don't wrap chip rows or center them; they bleed off-screen and scroll. Don't put the \"add my own\" affordance inside the row.",
+      "Don't put large money figures on saturated fills, use Bricolage below weight 800, or introduce a fifth accent color.",
+      "Don't theme the stage or phone bezel — the page around the screen is always black; only .phone__screen carries data-theme."
+    ]
+  }
+}
