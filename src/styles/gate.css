@@ -1,0 +1,116 @@
+.gate {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  padding: 24px;
+}
+
+.gate__panel {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.gate__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #ffc531;
+  background: rgba(255, 197, 49, 0.1);
+  margin-bottom: 18px;
+}
+
+.gate__title {
+  font-family: 'Bricolage Grotesque Variable', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #f4f5f7;
+}
+
+.gate__copy {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #969aa3;
+}
+
+.gate__field {
+  margin-top: 26px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 52px;
+  padding: 0 6px 0 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  transition: border-color 0.15s ease;
+}
+
+.gate__field:focus-within {
+  border-color: #2be5d6;
+}
+
+.gate__field.is-error {
+  border-color: #ff5c8a;
+}
+
+.gate__field input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  background: transparent;
+  color: #f4f5f7;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+
+.gate__field input:focus {
+  outline: none;
+}
+
+.gate__field input::placeholder {
+  color: #969aa3;
+}
+
+.gate__field button {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #ffc531;
+  color: #2a1a00;
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease;
+}
+
+.gate__field button:hover:enabled {
+  transform: translateX(1px);
+}
+
+.gate__field button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.gate__error {
+  margin-top: 14px;
+  font-size: 13px;
+  color: #ff5c8a;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.gate__error.is-visible {
+  opacity: 1;
+}

@@ -14,6 +14,23 @@ function base(props: SVGProps<SVGSVGElement>) {
   };
 }
 
+export function LockIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...base(props)}>
+      <rect x="5" y="11" width="14" height="10" rx="2.4" />
+      <path d="M8 11V7.5a4 4 0 0 1 8 0V11" />
+    </svg>
+  );
+}
+
+export function ArrowRightIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...base(props)}>
+      <path d="M5 12h14M13 6l6 6-6 6" />
+    </svg>
+  );
+}
+
 export function SunIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg {...base(props)}>

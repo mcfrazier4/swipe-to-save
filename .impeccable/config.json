@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-color",
+        "value": "#969aa3",
+        "createdAt": "2026-08-04T05:38:59.464Z",
+        "reason": "Matches existing unthemed stage-chrome gray already used in app.css (.controls__mode, .controls__reset) — the gate sits on the same raw black stage, not inside a themed phone screen"
+      }
+    ]
+  }
+}

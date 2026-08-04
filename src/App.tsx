@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { SavingsProvider, useSavings } from './state/SavingsContext';
 import { PhoneFrame } from './components/phone/PhoneFrame';
 import { AppHome } from './components/app/AppHome';
+import { PasswordGate } from './components/gate/PasswordGate';
 import { SunIcon, MoonIcon, ResetIcon } from './components/icons';
 import './styles/app.css';
 
@@ -60,14 +61,16 @@ function App() {
   }, [theme]);
 
   return (
-    <SavingsProvider>
-      <main className="stage">
-        <PhoneFrame theme={theme}>
-          <AppHome />
-        </PhoneFrame>
-        <DemoControls theme={theme} onThemeChange={setTheme} />
-      </main>
-    </SavingsProvider>
+    <PasswordGate>
+      <SavingsProvider>
+        <main className="stage">
+          <PhoneFrame theme={theme}>
+            <AppHome />
+          </PhoneFrame>
+          <DemoControls theme={theme} onThemeChange={setTheme} />
+        </main>
+      </SavingsProvider>
+    </PasswordGate>
   );
 }
 
